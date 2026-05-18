@@ -7,6 +7,10 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return this.appService.getHello() + this.appService.getWorld() + '!!@@';
+  }
+  @Get('world')
+  getWorld(): string {
+    return this.appService.getWorld();
   }
 }
